@@ -10,3 +10,13 @@
   font-family: "DK Courant";
   src: url(../fonts/dk-courant.ttf);
 }
+
+@font-face {
+  font-family: "hand_shop_typography_c30_deRg";
+  src: url(../fonts/fontscafe_handshoptypography-c30_demo-webfont.woff2)
+      format("woff2"),
+    url(../fonts/fontscafe_handshoptypography-c30_demo-webfont.woff)
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
