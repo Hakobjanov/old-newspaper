@@ -6,9 +6,13 @@
   font-family: "Averiaserif Regular";
   src: url(../fonts/averiaserif-regular.ttf);
 }
+
 @font-face {
-  font-family: "DK Courant";
-  src: url(../fonts/dk-courant.ttf);
+  font-family: "dk_courantregular";
+  src: url(../fonts/dk_courant-webfont.woff2) format("woff2"),
+    url(../fonts/dk_courant-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {

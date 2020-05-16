@@ -46,9 +46,11 @@ body {
 
 .header__top-title {
   width: 80%;
-  font-family: "DK Courant";
-  font-size: 54px;
-  line-height: 5px;
+  .main-title {
+    font-family: "dk_courantregular";
+    font-size: 90px;
+    line-height: 5px;
+  }
 }
 
 .header__top-subtitle {
@@ -442,41 +444,3 @@ body {
 }
 
 @import "media";
-@media screen and (max-width: 1340px) {
-  .main-content {
-    grid-template-areas:
-      "editorial editorial meeting "
-      " extra   extra    meeting    "
-      "extra  extra   phone   "
-      " extra  extra    phone   "
-      " welcome   welcome   phone  "
-      " old-paper old-paper old-paper "
-      " your-title your-title your-title";
-  }
-
-  .your-title {
-    display: flex;
-    align-items: center;
-    border-top: 2px solid #544434;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .main-content {
-    grid-template-areas:
-      "editorial editorial "
-      " extra   extra   "
-      "extra  extra  "
-      "  meeting   meeting    "
-      " welcome     welcome  "
-      " old-paper old-paper "
-      " your-title your-title "
-      " phone phone ";
-  }
-
-  .your-title {
-    img {
-      display: none;
-    }
-  }
-}
