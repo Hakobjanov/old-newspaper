@@ -146,6 +146,16 @@
   .editorial__title {
     font-size: 48px;
   }
+
+  #overlay {
+    .modal {
+      display: block;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -263,6 +273,7 @@
     margin-bottom: 5px;
   }
 }
+
 @media screen and (max-width: 420px) {
   .header__top {
     .main-title {

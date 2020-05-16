@@ -5,9 +5,11 @@ const closeBtn = document.querySelector(".close-btn");
 const illustrations = document.querySelectorAll(".illustration");
 const images = [...document.querySelectorAll(".images img")];
 const overlay = document.querySelector("#overlay");
+const upBtn = document.querySelector(".up");
 
 prevBtn.addEventListener("click", showPrev);
 nextBtn.addEventListener("click", showNext);
+upBtn.addEventListener("click", () => scrollTo(0, 0));
 closeBtn.addEventListener("click", toggleGallery);
 overlay.addEventListener("click", (e) => {
   if (e.target === overlay) {
@@ -54,14 +56,15 @@ function show(i) {
   images[i].classList.remove("hidden");
 }
 
-// function rotate(shift = 1) {
-//   const currentImageIndex = images.findIndex(
-//     (img) => !img.classList.contains("hidden")
-//   );
+window.addEventListener("scroll", toggleUpBtn);
+
+function toggleUpBtn() {
+  if (scrollY > 500) {
+    upBtn.classList.remove("hidden");
+  } else {
+    upBtn.classList.add("hidden");
+  }
+}
 
 //   const nextImageIndex =
 //     (currentImageIndex + shift + images.length) % images.length;
-
-//   images[currentImageIndex].classList.add("hidden");
-//   images[nextImageIndex].classList.remove("hidden");
-// }
