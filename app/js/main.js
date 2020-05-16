@@ -7,10 +7,12 @@ const images = [...document.querySelectorAll(".images img")];
 const overlay = document.querySelector("#overlay");
 const upBtn = document.querySelector(".up");
 
+//event listeners
 prevBtn.addEventListener("click", showPrev);
 nextBtn.addEventListener("click", showNext);
 upBtn.addEventListener("click", () => scrollTo(0, 0));
 closeBtn.addEventListener("click", toggleGallery);
+
 overlay.addEventListener("click", (e) => {
   if (e.target === overlay) {
     toggleGallery();
@@ -24,6 +26,7 @@ illustrations.forEach((illustration) => {
   });
 });
 
+//functions
 function showPrev() {
   const currentImageIndex = images.findIndex(
     (img) => !img.classList.contains("hidden")
@@ -56,6 +59,7 @@ function show(i) {
   images[i].classList.remove("hidden");
 }
 
+//for showing/hidding up button
 window.addEventListener("scroll", toggleUpBtn);
 
 function toggleUpBtn() {
